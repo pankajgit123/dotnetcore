@@ -1,0 +1,28 @@
+## .NET / Visual Studio / Rider
+bin/
+obj/
+
+## Build outputs
+[Pp]ublish/
+[Pp]ublished/
+artifacts/
+
+## User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+## VS / VS Code / JetBrains Rider
+.vs/
+.vscode/
+.idea/
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## Logs
+*.log
+
