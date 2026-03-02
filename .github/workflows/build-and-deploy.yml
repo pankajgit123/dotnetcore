@@ -36,11 +36,12 @@ jobs:
         with:
           dotnet-version: "8.0.x"
 
-      - name: Deploy (publish)
-        run: dotnet publish src/ProductMvc/ProductMvc.csproj --configuration Release --output publish/productmvc
+      - name: Publish
+        run: dotnet publish src/ProductMvc/ProductMvc.csproj --configuration Release --output publish
 
-      - name: Upload published app artifact
-        uses: actions/upload-artifact@v4
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
         with:
-          name: dotnet-publish
-          path: publish
+          app-name: product-api-service-gvbnc5byaxfjc9hq
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: publish
