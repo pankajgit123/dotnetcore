@@ -8,6 +8,7 @@ namespace ProductMvc.Controllers;
 [Route("products")]
 public class ProductsController : ControllerBase
 {
+    // test
     private static readonly IReadOnlyList<Product> Products = ProductStore.Create();
 
     [HttpGet]
